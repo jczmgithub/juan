@@ -3,6 +3,8 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use App\UsuPermitido;
+use Illuminate\Http\Request;
 
 class Permisos
 {
@@ -15,6 +17,7 @@ class Permisos
      */
     public function handle($request, Closure $next)
     {
-        return $next($request);
+
+        return redirect('vistaNoPermiso');
     }
 }

@@ -11,4 +11,8 @@ class UsuPermitido extends Model
     protected $table = 'usuPermitidos';
 
     protected $fillable = ['nombreUsu',];
+
+    public function isAdmin() {
+        return $this->permiso;
+    }
 }
