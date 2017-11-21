@@ -17,7 +17,7 @@ class Permisos
      */
     public function handle($request, Closure $next)
     {
-        if ($request->user()->isAdmin()) { //comprobar si el usuario tiene permisos
+        if ($request->user()->isAdmin()) { //comprobar si el usuario tiene permisos // cambiar user()
             return $next($request);
         }
         return view('vistaNoPermiso');
